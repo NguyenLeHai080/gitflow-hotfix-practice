@@ -58,8 +58,8 @@
 
   <script>
     function handleLogin() {
-      // API endpoint xác thực người dùng
-      const authEndpoint = "/api/v1/auth/login";
+      // BUG: Nhầm lẫn endpoint localhost nội bộ chưa sửa gây lỗi 500/Connection Refused trên Production!
+      const authEndpoint = "http://localhost:9999/debug/broken-auth";
       console.log("Gửi yêu cầu đăng nhập tới:", authEndpoint);
       alert("Đang kết nối tới: " + authEndpoint);
     }
