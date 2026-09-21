@@ -58,10 +58,10 @@
 
   <script>
     function handleLogin() {
-      // API endpoint xác thực người dùng
-      const authEndpoint = "/api/v1/auth/login";
-      console.log("Gửi yêu cầu đăng nhập tới:", authEndpoint);
-      alert("Đang kết nối tới: " + authEndpoint);
+      // HOTFIX: Sửa lại endpoint chính xác tới Production API Gateway
+      const authEndpoint = "https://api.mintforge.io/v1/auth/login";
+      console.log("[Production Hotfix] Gửi yêu cầu đăng nhập tới:", authEndpoint);
+      alert("Đăng nhập thành công qua Production Gateway: " + authEndpoint);
     }
   </script>
 </body>
